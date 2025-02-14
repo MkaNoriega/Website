@@ -1,0 +1,455 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Made this cool gradient background that matches my style */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: radial-gradient(circle at center, 
+        #D2B48C 0%, /* My favorite beige color */
+        #8B7355 50%, /* Adding some brown for depth */
+        #696969 100% /* A touch of gray to finish it */
+    );
+    min-height: 100vh;
+}
+
+/* Keeping my content centered and organized */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Added this glass effect to my nav - looks super clean! */
+.nav-bar {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);  /* Love this glass look */
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Spacing out those nav links just right */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 60px; /* Breathing room between links */
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* About Section Styling */
+.about {
+    background: transparent;
+    padding: 60px 0;
+    padding-top: 100px;  /* Add extra padding at top to account for fixed navbar */
+}
+
+.about-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.profile-photo {
+    width: 500px;  
+    height: 600px; 
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.about-text h1 {
+    font-size: 2.5em;
+    color: #2C1810; /* Deep brown for main heading */
+    margin-bottom: 20px;
+}
+
+/* Social Media Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: #3D2419; /* Rich brown for icons */
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #2C1810; /* Darker on hover */
+}
+
+/* Quote Styling */
+.quote {
+    font-style: italic;
+    color: #3D2419; /* Rich brown for quote */
+    border-left: 4px solid #2C1810;
+    padding: 20px;
+    margin: 30px 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+/* Section Styles */
+section {
+    min-height: 100vh;  /* Make each section full viewport height */
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* New styles for about section */
+.about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-details {
+    margin: 30px 0;
+}
+
+.about-details h3 {
+    color: #3D2419; /* Rich brown for subheadings */
+    margin: 20px 0 10px 0;
+    font-size: 1.2em;
+}
+
+.about-details p {
+    color: #4A3223; /* Warm brown for body text */
+    margin-bottom: 15px;
+}
+
+.about-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.about-list li {
+    margin-bottom: 8px;
+    color: #4A3223; /* Warm brown for body text */
+    display: flex;
+    align-items: baseline;
+}
+
+.about-list li::before {
+    content: "•";
+    color: #6366f1;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.quote-author {
+    font-size: 0.9em;
+    color: #5C4033; /* Softer brown for quote attribution */
+    margin-top: 5px;
+}
+
+/* Skills Section */
+.skills {
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+    padding-top: 100px;  /* Add extra padding at top to account for fixed navbar */
+}
+
+.skills::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(99, 102, 241, 0.2), transparent);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.skill-card {
+    text-align: center;
+    padding: 30px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-card p {
+    margin-top: 10px;
+    color: #4a5568;
+    font-size: 0.9em;
+}
+
+.skill-card i {
+    font-size: 2.5em;
+    color: #667eea;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover i {
+    transform: scale(1.1);
+}
+
+/* Projects Section */
+.projects {
+    background: transparent;
+    position: relative;
+    padding-top: 100px;  /* Add extra padding at top to account for fixed navbar */
+}
+
+.projects::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(99, 102, 241, 0.2), transparent);
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 25px rgba(99, 102, 241, 0.1);
+}
+
+/* Contact Section */
+.contact {
+    background: linear-gradient(to bottom, #f8fafc, #f1f5f9);
+    position: relative;
+}
+
+.contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(99, 102, 241, 0.2), transparent);
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-item:hover {
+    color: #667eea;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.1), transparent);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Navigation adjustments */
+    .nav-links {
+        gap: 20px; /* Reduce gap between nav items */
+    }
+    
+    .nav-links a {
+        font-size: 0.9em; /* Smaller font size for nav items */
+    }
+
+    /* About section adjustments */
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        padding: 0 15px;
+    }
+
+    /* Profile photo adjustments */
+    .profile-photo {
+        width: 100%; /* Make image responsive */
+        max-width: 300px; /* Maximum width on mobile */
+        height: auto; /* Maintain aspect ratio */
+        margin: 0 auto;
+    }
+
+    /* Text adjustments */
+    .about-text h1 {
+        font-size: 1.8em;
+    }
+
+    /* Skills section adjustments */
+    .skills-grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+        gap: 20px;
+        padding: 0 15px;
+    }
+
+    /* Projects section adjustments */
+    .project-grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+        gap: 20px;
+        padding: 0 15px;
+    }
+
+    /* Section spacing */
+    section {
+        min-height: auto; /* Remove fixed height */
+        padding: 60px 0;
+    }
+
+    /* Quote adjustments */
+    .quote {
+        margin: 20px 15px;
+    }
+
+    /* Social icons adjustments */
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+/* Add smaller screen adjustments */
+@media (max-width: 480px) {
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 0.8em;
+        padding: 3px 8px;
+    }
+
+    .about-text h1 {
+        font-size: 1.5em;
+    }
+
+    .highlight {
+        padding: 8px 15px;
+    }
+}
+
+/* Social Media Heading */
+.social-heading {
+    color: #2C1810; /* Deep brown to match h1 */
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+/* Add smooth scrolling behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+.highlight {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* Animation classes */
+.fade-out {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Add transitions to cards and icons */
+.skill-card, .project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icons i {
+    transition: transform 0.3s ease;
+}
